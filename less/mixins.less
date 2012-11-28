@@ -1,0 +1,151 @@
+// =============================================================================
+// Mixins
+// =============================================================================
+
+.border-radius(@radius: 0.25em) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+            border-radius: @radius;
+}
+
+.box-shadow (@x: 0, @y: 0, @blur: 0.4em, @spread: 0.0625em, @color: rgba(0, 0, 0, .4)) {
+    -webkit-box-shadow: @arguments;
+       -moz-box-shadow: @arguments;
+            box-shadow: @arguments;
+}
+
+.box-shadow-inset (@x: 0, @y: 0, @blur: 0.125em, @spread: 0,  @color: rgba(255, 255, 255, .5)) {
+    -webkit-box-shadow: inset @arguments;
+       -moz-box-shadow: inset @arguments;
+            box-shadow: inset @arguments;
+}
+
+.text-shadow (@x: 0, @y: 0.0625em, @blur: 0.0625em, @color: rgba(0, 0, 0, .4)) {
+    text-shadow: @arguments;
+}
+
+.transition(@transition) {
+    -webkit-transition: @transition;
+       -moz-transition: @transition;
+        -ms-transition: @transition;
+         -o-transition: @transition;
+            transition: @transition;
+}
+
+.font(@sizepx: 16, @topmargin: 2, @bottommargin: 1) {
+    font-size: ~`(@{sizepx}/16)+"em"`;
+    @lines: ceil(@sizepx/24);
+    line-height: ~`@{lines}*24/@{sizepx}+"em"`;
+    margin-top: ~`((@{topmargin}*24)/@{sizepx})+"em"`;
+    margin-bottom: ~`((@{bottommargin}*24)/@{sizepx})+"em"`;
+}
+
+
+
+// -----------------------------------------------------------------------------
+// Padding Shorthand
+// -----------------------------------------------------------------------------
+
+.padding(@top, @right, @bottom, @left) {
+    padding-top: @top;
+    padding-right: @right;
+    padding-bottom: @bottom;
+    padding-left: @left;
+}
+
+.padding(@top, @sides, @bottom) {
+    padding-top: @top;
+    padding-right: @sides;
+    padding-bottom: @bottom;
+    padding-left: @sides;
+}
+
+.padding(@topandbottom, @sides) {
+    padding-top: @topandbottom;
+    padding-right: @sides;
+    padding-bottom: @topandbottom;
+    padding-left: @sides;
+}
+
+.padding(@padding) {
+    padding-top: @padding;
+    padding-right: @padding;
+    padding-bottom: @padding;
+    padding-left: @padding;
+}
+
+
+
+// -----------------------------------------------------------------------------
+// Margin Shorthand
+// -----------------------------------------------------------------------------
+
+.margin(@top, @right, @bottom, @left) {
+    margin-top: @top;
+    margin-right: @right;
+    margin-bottom: @bottom;
+    margin-left: @left;
+}
+
+.margin(@top, @sides, @bottom) {
+    margin-top: @top;
+    margin-right: @sides;
+    margin-bottom: @bottom;
+    margin-left: @sides;
+}
+
+.margin(@topandbottom, @sides) {
+    margin-top: @topandbottom;
+    margin-right: @sides;
+    margin-bottom: @topandbottom;
+    margin-left: @sides;
+}
+
+.margin(@margin) {
+    margin-top: @margin;
+    margin-right: @margin;
+    margin-bottom: @margin;
+    margin-left: @margin;
+}
+
+
+
+// -----------------------------------------------------------------------------
+// Dynamic Width Centering
+// -----------------------------------------------------------------------------
+
+.dwc-outer() {
+	display: block;
+	float: left;
+	position: relative;
+}
+
+.dwc-inner() {
+	display: block;
+	clear: left;
+	float: right;
+	position: relative;
+	right: 50%;
+	text-align: center;
+}
+
+.dwc-child() {
+	display: block;
+	float: left;
+	position: relative;
+	left: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
