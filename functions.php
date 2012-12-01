@@ -148,5 +148,32 @@ function twentyem_wp_head() {
 }
 //add_action( 'wp_head', 'twentyem_wp_head', -10 );
 
+/**
+ * Returns a filterable body opening tag.
+ *
+ * @since Twenty Em 0.1.0
+ * @uses apply_filters() Calls the 'twentyem_filter_body_opening_tag' hook on the body opening tag.
+ *
+ * @param string|array $class One or more classes to add to the class list.
+ * @return string Filtered body opening tag.
+ */
+function twentyem_get_body_opening_tag( $class = '' ) {
+	$classes = '';
+	$body = '<body';
+
+	if ( function_exists( 'get_body_class' ) ) {
+		$classes = get_body_class( $class );
+	}
+
+	if ( ! empty( $classes ) ) {
+		$body .= ' class="' . join( ' ', get_body_class( $class ) ) . '"';
+	}
+
+	$body .= '>';
+
+	return apply_filters( 'twentyem_filter_body_opening_tag', $body );
+}
+
+
 
 

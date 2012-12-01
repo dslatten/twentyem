@@ -18,4 +18,5 @@
 	<title><?php wp_title(); ?></title>
 <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<?php echo twentyem_get_body_opening_tag(); // <body class="get_body_class()"> ?>
+
