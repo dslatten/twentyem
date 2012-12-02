@@ -13,10 +13,8 @@
 
 <?php echo twentyem_get_html_opening_tag(); // <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"> ?>
 
-<head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<title><?php wp_title(); ?></title>
-<?php wp_head(); ?>
-</head>
+<?php echo twentyem_get_head_element(); // <head>...</head> ?>
+
 <?php echo twentyem_get_body_opening_tag(); // <body class="get_body_class()"> ?>
 
+<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
