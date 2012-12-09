@@ -32,7 +32,7 @@
             transition: @transition;
 }
 
-.font(@sizepx: 16, @topmargin: 2, @bottommargin: 1) {
+.font(@sizepx: 16, @topmargin: 1, @bottommargin: 1) {
     font-size: ~`(@{sizepx}/16)+"em"`;
     @lines: ceil(@sizepx/24);
     line-height: ~`@{lines}*24/@{sizepx}+"em"`;

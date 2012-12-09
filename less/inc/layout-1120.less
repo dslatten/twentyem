@@ -1,0 +1,76 @@
+/* ========================================================================== *\
+   Layout 1120 [1120px - 1279px] [70em - 79.9375em]
+\* ========================================================================== */
+
+@media only screen and (min-width: 70em) and (max-width: 79.9375em) {
+
+	.wrapper {
+		width: 70em;
+	}
+
+	#top {
+
+		.section-1 {
+			left: @section-outer-width-narrow;
+		}
+
+		.section-2 {
+			width: (@section-outer-width * 3.5);
+		}
+
+		.section-3 {
+			
+		}
+
+	}
+	
+	#mid {
+
+		.section-1 { // content
+			left: @section-outer-width-narrow;
+		}
+
+		.section-2 { // sidebar 1
+			left: -(@section-outer-width * 2);
+			width: @section-outer-width-narrow;
+		}
+
+		.section-3 { // sidebar 2
+			width: @section-outer-width-narrow;
+		}
+
+	}
+
+	#low {
+
+		.row-1 {
+
+			.section-1 {
+				width: @section-outer-width-narrow;
+			}
+
+			.section-2 {
+				
+			}
+
+			.section-3 {
+				
+			}
+
+			.section-4 {
+				width: @section-outer-width-narrow;
+			}
+
+		}
+
+		.row-2 {
+
+			.section-1 {
+				width: (@section-outer-width * 3.5);
+			}
+
+		}
+
+	}
+
+}

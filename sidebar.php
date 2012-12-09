@@ -9,8 +9,17 @@
  * @since Twenty Em 0.1.0
  */
 ?>
-<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
-	<div id="secondary" class="widget-area" role="complementary">
-		<?php dynamic_sidebar( 'sidebar-1' ); ?>
-	</div><!-- #secondary -->
-<?php endif; ?>
+				<div class="col section-2">
+					<div id="secondary">
+						<div id="sidebar-1">
+
+						</div><!-- #sidebar-1 -->
+					</div><!-- #secondary -->
+				</div>
+				<div class="col section-3">
+					<div id="tertiary">
+						<div id="sidebar-2">
+							
+						</div><!-- #sidebar-2 -->
+					</div><!-- #tertiary -->
+				</div>

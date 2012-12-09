@@ -1,0 +1,76 @@
+/* ========================================================================== *\
+   Layout 960 [960px - 1119px] [60em - 69.9375em]
+\* ========================================================================== */
+
+@media only screen and (min-width: 60em) and (max-width: 69.9375em) {
+
+	.wrapper {
+		width: 60em;
+	}
+
+	#top {
+
+		.section-1 {
+			left: @section-outer-width;
+			width: @section-outer-width;
+		}
+
+		.section-2 {
+			width: (@section-outer-width * 3);
+		}
+
+		.section-3 {
+			
+		}
+
+	}
+	
+	#mid {
+
+		.section-1 { // content
+			left: 0;
+		}
+
+		.section-2 { // sidebar 1
+			left: 0;
+		}
+
+		.section-3 { // sidebar 2
+			
+		}
+
+	}
+
+	#low {
+
+		.row-1 {
+
+			.section-1 {
+				width: @section-outer-width-narrow;
+			}
+
+			.section-2 {
+				width: @section-outer-width-narrow;
+			}
+
+			.section-3 {
+				width: @section-outer-width-narrow;
+			}
+
+			.section-4 {
+				width: @section-outer-width-narrow;
+			}
+
+		}
+
+		.row-2 {
+
+			.section-1 {
+				width: (@section-outer-width * 3);
+			}
+
+		}
+
+	}
+
+}

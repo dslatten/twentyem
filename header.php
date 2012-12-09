@@ -17,4 +17,4 @@
 
 <?php echo twentyem_get_body_opening_tag(); // <body class="get_body_class()"> ?>
 
-<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+

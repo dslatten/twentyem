@@ -1,6 +1,6 @@
-// =============================================================================
-// WordPress Core CSS Classes
-// =============================================================================
+/* ========================================================================== *\
+   WordPress Core CSS Classes
+\* ========================================================================== */
 
 
 
@@ -9,82 +9,106 @@
 // -----------------------------------------------------------------------------
 
 .alignnone {
-    margin: 5px 20px 20px 0;
-}
-
-.aligncenter,
-div.aligncenter {
-    display: block;
-    margin: 5px auto 5px auto;
+	margin: 0.25em 1.5em 1.5em 0;
 }
 
 .alignright {
-    float: right;
-    margin: 5px 0 20px 20px;
+	float: right;
+	margin: 0.25em 0 1.5em 1.5em;
 }
 
 .alignleft {
-    float: left;
-    margin: 5px 20px 20px 0;
+	float: left;
+	margin: 0.25em 1.5em 1.5em 0;
 }
 
 .aligncenter {
-    display: block;
-    margin: 5px auto 5px auto;
-}
-
-a img.alignright {
-    float: right;
-    margin: 5px 0 20px 20px;
-}
-
-a img.alignnone {
-    margin: 5px 20px 20px 0;
-}
-
-a img.alignleft {
-    float: left;
-    margin: 5px 20px 20px 0;
-}
-
-a img.aligncenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .wp-caption {
-    background: #fff;
-    border: 1px solid #f0f0f0;
-    max-width: 96%; /* Image does not overflow the content area */
-    padding: 5px 3px 10px;
-    text-align: center;
+	background: #fff;
+	border: 0.0625em solid #f0f0f0;
+	max-width: 100%; // Keep wide captions from overflowing their container. //
+	padding: 0.25em 0.25em 0.5em;
+	text-align: center;
 }
 
-.wp-caption.alignnone {
-    margin: 5px 20px 20px 0;
+.wp-caption .wp-caption-text {
+	font-style: italic;
+	font-size: 0.75em;
+	line-height: 1em;
+	margin: 0;
+	padding: 0 0.25em 0.25em;
 }
 
-.wp-caption.alignleft {
-    margin: 5px 20px 20px 0;
+.wp-caption .wp-caption-text,
+.gallery-caption,
+.entry-caption {
+	font-style: italic;
+	font-size: 12px;
+	font-size: 0.857142857rem;
+	line-height: 2;
+	color: #757575;
 }
 
-.wp-caption.alignright {
-    margin: 5px 0 20px 20px;
+img.wp-smiley,
+.rsswidget img {
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
 }
 
-.wp-caption img {
-    border: 0 none;
-    height: auto;
-    margin: 0;
-    max-width: 98.5%;
-    padding: 0;
-    width: auto;
+.entry-content dl.gallery-item {
+	margin: 0;
 }
 
-.wp-caption p.wp-caption-text {
-    font-size: 11px;
-    line-height: 17px;
-    margin: 0;
-    padding: 0 4px 5px;
+.gallery-item a,
+.gallery-caption {
+	width: 90%;
+}
+
+.gallery-item a {
+	display: block;
+}
+
+.gallery-caption a {
+	display: inline;
+}
+
+.sticky .featured-post {
+	border-top: 4px double #ededed;
+	border-bottom: 4px double #ededed;
+	color: #757575;
+	font-size: 13px;
+	font-size: 0.928571429rem;
+	line-height: 3.692307692;
+	margin-bottom: 24px;
+	margin-bottom: 1.714285714rem;
+	text-align: center;
+}
+
+li.bypostauthor cite span {
+	color: #fff;
+	background-color: #21759b;
+	background-image: none;
+	border: 1px solid #1f6f93;
+	border-radius: 2px;
+	box-shadow: none;
+	padding: 0;
+}
+
+.comments-area li.bypostauthor cite span {
+	position: absolute;
+	margin-left: 5px;
+	margin-left: 0.357142857rem;
+	padding: 2px 5px;
+	padding: 0.142857143rem 0.357142857rem;
+	font-size: 10px;
+	font-size: 0.714285714rem;
 }

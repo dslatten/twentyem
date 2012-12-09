@@ -31,6 +31,15 @@ if ( defined( 'WP_DEBUG' ) && ( true == WP_DEBUG ) ) {
 
 
 /**
+ * Sets up the content width value based on the theme's design and stylesheet.
+ */
+if ( ! isset( $content_width ) ) {
+	$content_width = 640;
+}
+
+
+
+/**
  * Returns a filterable doctype element.
  *
  * @since Twenty Em 0.1.0
@@ -191,6 +200,9 @@ function twentyem_get_head_element() {
 
 	// <title> wp_title() </title>
 	$elements[] = apply_filters( 'twentyem_filter_title_element', '<title>' . wp_title( '&raquo;', false ) . '</title>' );
+
+	// <meta name="viewport" />
+	$elements[] = apply_filters( 'twentyem_filter_title_element', '<meta name="viewport" content="width=device-width, initial-scale=1" />' );
 
 	// The HTML code that is echoed by wp_head().
 	$wp_head_code = twentyem_get_wp_head();
@@ -444,8 +456,11 @@ remove_action( 'wp_head', 'wp_generator' );
 
 
 
+function twentyem_scripts_styles() {
+	wp_enqueue_style( 'twentyem-style', get_stylesheet_uri() );
+}
 
-
+add_action( 'wp_enqueue_scripts', 'twentyem_scripts_styles' );
 
 
 

@@ -1,0 +1,78 @@
+/* ========================================================================== *\
+   Layout 480 [480px - 639px] [30em - 39.9375em]
+\* ========================================================================== */
+
+@media only screen and (min-width: 30em) and (max-width: 39.9375em) {
+
+	.wrapper {
+		width: 30em;
+	}
+
+	#top {
+
+		.section-1 {
+			left: (@section-outer-width * .25);
+			width: @section-outer-width;
+		}
+
+		.section-2 {
+			width: (@section-outer-width * 1.5);
+		}
+
+		.section-3 {
+			
+		}
+
+	}
+	
+	#mid {
+
+		.section-1 { // content
+			left: 0;
+			width: (@section-outer-width-narrow * 2);
+		}
+
+		.section-2 { // sidebar 1
+			left: 0;
+			width: @section-outer-width-narrow;
+		}
+
+		.section-3 { // sidebar 2
+			width: @section-outer-width-narrow;
+		}
+
+	}
+
+	#low {
+
+		.row-1 {
+
+			.section-1 {
+				width: @section-outer-width-narrow;
+			}
+
+			.section-2 {
+				width: @section-outer-width-narrow;
+			}
+
+			.section-3 {
+				width: @section-outer-width-narrow;
+			}
+
+			.section-4 {
+				width: @section-outer-width-narrow;
+			}
+
+		}
+
+		.row-2 {
+
+			.section-1 {
+				width: (@section-outer-width * 1.5);
+			}
+
+		}
+
+	}
+
+}

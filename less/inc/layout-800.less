@@ -1,0 +1,76 @@
+/* ========================================================================== *\
+   Layout 800 [800px - 959px] [50em - 59.9375em]
+\* ========================================================================== */
+
+@media only screen and (min-width: 50em) and (max-width: 59.9375em) {
+
+	.wrapper {
+		width: 50em;
+	}
+
+	#top {
+
+		.section-1 {
+			left: @section-outer-width-narrow;
+			width: @section-outer-width;
+		}
+
+		.section-2 {
+			width: (@section-outer-width * 2.5);
+		}
+
+		.section-3 {
+			
+		}
+
+	}
+	
+	#mid {
+
+		.section-1 { // content
+			left: (@section-outer-width * .25);
+		}
+
+		.section-2 { // sidebar 1
+			left: (@section-outer-width * .25);
+		}
+
+		.section-3 { // sidebar 2
+			left: (@section-outer-width * .25);
+		}
+
+	}
+
+	#low {
+
+		.row-1 {
+
+			.section-1 {
+				left: (@section-outer-width * .25);
+			}
+
+			.section-2 {
+				left: (@section-outer-width * .25);
+			}
+
+			.section-3 {
+				left: (@section-outer-width * .25);
+			}
+
+			.section-4 {
+				left: (@section-outer-width * .25);
+			}
+
+		}
+
+		.row-2 {
+
+			.section-1 {
+				width: (@section-outer-width * 2.5);
+			}
+
+		}
+
+	}
+
+}

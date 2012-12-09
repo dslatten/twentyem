@@ -1,0 +1,154 @@
+/* ========================================================================== *\
+   Layout Default [1280px+] [80em+] (or devices without @media support)
+\* ========================================================================== */
+
+// -----------------------------------------------------------------------------
+// These default layout styles are applied to all devices and browsers. If a
+// given device or browser does not support @media queries, these are the only
+// layout styles that will be applied. If a given device or browser *does*
+// support @media queries, these styles will be applied first, and the
+// more-specific @media query styles will add to (or override) these defaults.
+//
+// However, the @media query layout styles do not inherit from each other,
+// because the ranges of specified min/max widths do not overlap. This is
+// slightly different from the common "mobile first" design architecture, where
+// only a min-width is defined and large-screen devices inherit styles from each
+// of the previous (i.e., narrower) breakpoints.
+//
+// Here is a visual example to help make this distinction more clear. Suppose a
+// visitor views a page on a 1024x768 screen, using a browser that supports
+// @media queries. The page's layout styles would be determined by calculating
+// the following cascade (lower = more specific):
+//
+//   Twenty Em Layout Cascade               Common Mobile First Layout Cascade
+//   ----------------------------------     ----------------------------------
+//     Default Layout                         Default Layout
+//     (all devices)                          (all devices)
+//   +                                      +
+//     960 Layout                             480 Layout
+//     (min-width: 960px)                     (min-width: 480px)
+//     (max-width: 1119px)                  +
+//   = -------------------                    640 Layout
+//     Computed Layout                        (min-width: 640px)
+//                                          +
+//                                            800 Layout
+//                                            (min-width: 800px)
+//                                          +
+//                                            960 Layout
+//                                            (min-width: 960px)
+//                                          = -------------------
+//                                            Computed Layout
+//
+// -----------------------------------------------------------------------------
+
+.section-1,
+.section-2,
+.section-3,
+.section-4,
+.section-5 {
+	position: relative;
+	width: @section-outer-width;
+	.margin(0);
+	.padding(@section-padding-topandbottom, 0);
+	overflow-x: hidden;
+}
+
+.wrapper {
+	width: 80em;
+}
+		
+#top {
+
+	.section-1 {
+		left: @section-outer-width;
+		width: (@section-outer-width * 2);
+		.padding(0);
+	}
+
+	.section-2 {
+		.dwc-outer();
+		width: (@section-outer-width * 4);
+		.padding(0);
+	}
+
+	.section-3 {
+		
+	}
+	
+}
+
+#mid {
+
+	.section-1 { // content
+		left: @section-outer-width;
+		width: (@section-outer-width * 2);
+	}
+
+	.section-2 { // sidebar 1
+		left: -(@section-outer-width * 2);
+	}
+
+	.section-3 { // sidebar 2
+		
+	}
+
+}
+
+#low {
+	padding-bottom: (@section-padding-topandbottom * 3);
+	.box-shadow();
+	
+	.row-1 {
+
+		.section-1 {
+			
+		}
+
+		.section-2 {
+			
+		}
+
+		.section-3 {
+			
+		}
+
+		.section-4 {
+			
+		}
+
+	}
+
+	.row-2 {
+
+		.section-1 {
+			width: (@section-outer-width * 4);
+			.padding(0);
+			text-align: center;
+		}
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
